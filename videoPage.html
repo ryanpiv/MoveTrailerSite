@@ -11,12 +11,12 @@
 
     <link rel="shortcut icon" href="Images/fav.png" />
 
+    <link rel="stylesheet" type="text/css" href="css/mainTwo.css" />
     <link href="Bootstrap/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="css/main.css" type="text/css" rel="stylesheet" />
     <link href="font-awesome-4.1.0/css/font-awesome.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="vegas/jquery.vegas.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/mainTwo.css" />
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
@@ -26,6 +26,19 @@
     <script type="text/javascript" src="vegas/jquery.vegas.js"></script>
 
     <script src="js/FitVids.js-master/jquery.fitvids.js"></script>
+
+    <style>
+        h1, h2, h3, p{
+            margin-bottom:0;
+            color:#ccc;
+        }
+        .progress{
+            border: 1px solid #ccc;
+            border-radius:10px;
+            background-color: transparent;
+            vertical-align: middle;
+        }
+    </style>
 
 </head>
 <body style="background-image:url(Images/wod2.jpg); background-size:cover; background-repeat: no-repeat background-position: top left; background-attachment: fixed;">
@@ -42,9 +55,10 @@
         </div>
         <div style="text-align:center" class="navbar-collapse collapse">
           <ul style="float:none" class="nav navbar-nav">
-            <li><a href="#">Welcome</a></li>
+            <li><a href="index.html">Welcome</a></li>
             <li><a href="featuredVideo.html">Featured Trailer</a></li>
             <li><a href="#">Forums</a></li>
+            <li><a href="search.html">Browse</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contact</a></li>
@@ -54,22 +68,55 @@
     </div>
 
     <div id="page-content-wrapper" style="margin-top:3%">
-        <div class="container" style="background:#1e1e1e; border:1px solid #4d4d4d; border-radius:1%">
+        <div class="container" style="background:#1e1e1e; border:1px solid #4d4d4d; border-radius:1%;">
             <div class="row">
                 <div id="videoDiv" class="col-lg-12">
                     <h2 style="color:#ccc; margin-bottom:0">World of Warcraft: Warlords of Draenor</h2>
                     <h3 style="color:#ccc; margin-top:0">Cinematic Trailer</h3>
                     <iframe max-width="100%" height="auto" src="https://www.youtube.com/embed/TLzhlsEFcVQ" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="col-lg-1">
+                    <p>Likes</p>
+                </div>
+                <div class="col-lg-9">
+                    
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete</span>
+                      </div>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-success">Like</button>
+                </div>
+                <div class="col-lg-12">
+                    <p>Dislikes</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete</span>
+                      </div>
+                    </div>
+                    <p>
+                        <button type="button" class="btn btn-danger">Dislike</button>
+                        </p>
+                    <h2 style="margin-bottom:0">Details</h2>
+                    <p style="margin-top:0; margin-bottom:0">Trailer released: <Insert Release Date></p>
+                    <p style="margin-top:0">Detailed information about the trailer will be inserted here. </p>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-      $(document).ready(function(){
+        $(document).ready(function(){
         // Target your .container, .wrapper, .post, etc.
-        $("#videoDiv").fitVids();
-      });
+            $("#videoDiv").fitVids();
+        });
+        
     </script>
 </body>
 </html>
