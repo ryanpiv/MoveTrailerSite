@@ -29,14 +29,92 @@
     <script src="js/FitText.js-master/jquery.fittext.js"></script>
 
     <style>
+        body{
+            background-color: #36D9C3;
+        }
         h1, h2, h3, p{
             margin-bottom:0;
             color:#ccc;
+            text-transform: uppercase;
+        }
+        section{
+            padding:10px;
+        }
+
+        .section-content, .section-gameDetails{
+            padding-top: 1%;
+            padding-bottom:1%;
+            background-color:#858585;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .section-gameDetails{
+            background-color:#EDEDED;
+            padding: 0;
+        }
+        .section-gameDetails h1, h2, h3, p{
+            color:#484848;
+            margin-top: 0;
+        }
+        .section-gameDetails p{
+            font-size: small;
+            text-transform: none;
+        }
+
+        .section-heading{
+            background-color:#36D9C3;
+            color:white;
+            padding: 1%
+        }
+        .section-heading h1{
+            color:white;
+            padding-top:2%;
+        }
+        .section-heading p{
+            margin-top:0;
+            color:white;
+            text-transform: uppercase;
+        }
+
+        #page-content-wrapper{
+            margin-top: 0;
+        }
+
+        legend{
+            margin-top:5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #A4A4A4;
+        }
+
+        .section-trailerDetails legend{
+            border-bottom: 1px solid white;
+        }
+        .section-trailerDetails h3{
+            text-align: center;
+            color:white;
+        }
+
+        .section-footer{
+            padding:2%;
+            background-color:#EDEDED;
+
+        }
+
+        #trailerDetailsP{
+            text-transform: none;
         }
     </style>
 
 </head>
-<body style="background-image:url(Images/wod2.jpg); background-size:cover; background-repeat: no-repeat background-position: top left; background-attachment: fixed;">
+<body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -53,7 +131,7 @@
             <li><a href="index.html">Welcome</a></li>
             <li><a href="featuredVideo.html">Featured Trailer</a></li>
             <li><a href="#">Forums</a></li>
-            <li><a href="#">Browse</a></li>
+            <li><a href="search.html">Browse</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contact</a></li>
@@ -62,7 +140,19 @@
       </div>
     </div>
 
-    <div id="page-content-wrapper" style="margin-top:3%">
+    <section class="section-heading">
+        <div class="container">
+            <div class="row">
+                <div style="text-align:center" class="col-lg-12">
+                    <h1>Deus Ex: Human Revolution</h1>
+                    <p>Cinematic Trailer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-content">
+    <div id="page-content-wrapper">
         <div class="container">
             <div class="row">
                 <div id="videoDiv" class="col-lg-12">
@@ -71,6 +161,62 @@
             </div>
         </div>
     </div>
+    </section>
+
+    <section class="section-gameDetails">
+        <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <h3>Game Details</h3>
+                    <legend></legend>
+                    <p>
+                In Deus Ex: Human Revolution, you play Adam Jensen, a security specialist, hand-picked to oversee the defense of one of America's most experimental biotechnology firms. But when a black ops team breaks in and kills the scientists you were hired to protect, everything you thought you knew about your job changes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-trailerDetails">
+        <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <h3>Trailer Details</h3>
+                    <legend></legend>
+                    <p>
+                        Release: December 10th, 2010<br \>
+                        Rating: 4.7 / 5
+                    </p>
+                    <p id="trailerDetailsP">
+                        The Deus Ex: Human Revolution Cinematic Trailer is a masterpiece.  Its cinematic appeal is both visually pleasing to accompany the fantastic soundtrack from composer Michael McCann, specializing in the combination of electronic audio with symphonic orchestra.
+                        <br />
+                        The trailer itself is a huge hype the game itself hardly needed, but we are glad they included anyway, as this trailer goes down in one of our most favorite of all time.
+                    </p>
+
+                    <p>Likes</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete</span>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Like</button>
+
+                    <p>Dislikes</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete</span>
+                      </div>
+                    </div>
+                    <p>
+                        <button type="button" class="btn btn-danger">Dislike</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-footer">
+    </section>
 
     <script>
         $(document).ready(function(){
